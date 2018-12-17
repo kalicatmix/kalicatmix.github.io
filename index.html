@@ -1,8 +1,62 @@
 <html>
 <head>
-<title>测试页面</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>个人介绍页面</title>
+<link rel="icon" href="static/img/cat.jpg" />
+<link rel="stylesheet" type="text/css" href="static/css/requires.css">
+<script type="text/javascript" src="static/js/jquery.js" ></script>
+<script type="application/javascript">
+	var bounceIn="animated bounceIn";
+	var fadeInDown="animated fadeInDown";
+	$(window).scroll(function(){
+		var top=$('.indro-top'),body=$('.intro-body'),footer=$('.intro-footer');
+		var w_top=window.scrollY;
+		var w_height=window.screen.height/10;
+		if(w_top>=body.offset().top-w_height){
+			body.addClass(bounceIn);
+		}
+		if(w_top>=footer.offset().top-w_height){
+			footer.addClass(bounceIn);
+		}
+		if(w_top>=footer.offset().top+w_height){
+			$('.intro-footer-item').addClass(fadeInDown);
+		}
+	})
+</script>
 </head>
 <body>
-<img src='cat.jpg' width='100rem' height='100rem'/>
+<div class="indro-top animated bounceIn">
+
+
+</div>
+<div class="intro-body">
+	
+</div>
+<div class="intro-footer">
+	<h1>Contact Me联系我</h1>
+	<div class="intro-footer-item">
+		<h1>
+			<a href="https://www.github.com/kalicatmix">
+				GitHub
+		<img src="static/img/github.png"/ class="intro-footer-item-img"></a>
+		</h1>
+	</div>
+	<div class="intro-footer-item">
+		<h1>
+			<a href="https://www.gitee.com/kalicatmix">
+				Gitee
+				<img src="static/img/gitee.svg" class="intro-footer-item-img"/>
+			</a>
+		</h1>
+	</div>
+	<div class="intro-footer-item">
+		<h1>
+		 Gmail
+		 <img  src="static/img/gmail.png" class="intro-footer-item-img"/>
+		</h1>
+		<h1>2868607141kalicat@gmail.com</h1>
+	</div>
+</div>
 </body>
 </html>
