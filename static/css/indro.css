@@ -1,0 +1,44 @@
+html,body{
+	position: relative;
+	left: 1%;
+	width: 98%;
+	height: 100%;
+}
+h1{
+	text-align: center;
+	color:white;
+}
+a{
+	color: white;
+	lighting-color: white;
+	text-decoration: none;
+}
+.indro-top{
+	width: 100%;
+	height:auto;
+	background: blue;
+}
+.intro-body{
+	width:100%;
+	height:auto;
+	background: black;
+}
+.intro-footer{
+	width:100%;
+	height:auto;
+	background: gray;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.intro-footer-item{
+	position: relative;
+	left:25%;
+	width:50%;
+	animation-duration: 5s;
+	
+}
+.intro-footer-item-img{
+	width:10rem;
+	height:10rem;
+}
