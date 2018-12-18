@@ -1,7 +1,12 @@
+<!--
+        	作者：kalicat
+        	时间：2018-12-17
+        	描述：个人介绍
+        -->
 <html>
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0"/>
 <title>个人介绍页面</title>
 <link rel="icon" href="static/img/cat.jpg" />
 <link rel="stylesheet" type="text/css" href="static/css/requires.css">
@@ -9,6 +14,25 @@
 <script type="application/javascript">
 	var bounceIn="animated bounceIn";
 	var fadeInDown="animated fadeInDown";
+	var rotateIn="animated rotateIn";
+	$(document).ready(function(){
+		const indro_text_zh="我是kalicat,谢谢你的来访,这是一个个人介绍页面，有兴趣就联系我哟!";
+		const indro_text_en="I'm kalicat. Thank you for your visit,This is a personal introduction page. If you are interested, please contact me.";
+		var kalicat=$('.indro-kalicat-photo');
+		var indro=$('.indro-top-indro');
+		if(window.navigator.language.indexOf("zh")>-1){
+		indro.text(indro_text_zh);	
+		}else{
+			indro.text(indro_text_en);
+		}
+		kalicat.mouseover(function(){
+			kalicat.addClass(rotateIn);
+			indro.addClass(bounceIn);
+		}).mouseout(function(){
+			kalicat.removeClass(rotateIn);
+			indro.removeClass(bounceIn);
+		})
+	})
 	$(window).scroll(function(){
 		var top=$('.indro-top'),body=$('.intro-body'),footer=$('.intro-footer');
 		var w_top=window.scrollY;
@@ -23,12 +47,19 @@
 			$('.intro-footer-item').addClass(fadeInDown);
 		}
 	})
+	
 </script>
 </head>
 <body>
 <div class="indro-top animated bounceIn">
-
-
+	<div class="indro-top-img ">
+		<h1><img src="static/img/cat.jpg" class="indro-kalicat-photo animated rotateIn"/>
+		KALICAT
+		</h1>
+		<h1 class="indro-top-indro animated bounceIn">
+			
+		</h1>
+	</div>
 </div>
 <div class="intro-body">
 	
