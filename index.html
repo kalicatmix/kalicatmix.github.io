@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=2.0"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>个人介绍页面</title>
 <link rel="icon" href="static/img/cat.jpg" />
 <link rel="stylesheet" type="text/css" href="static/css/requires.css">
@@ -16,10 +16,16 @@
 	var fadeInDown="animated fadeInDown";
 	var rotateIn="animated rotateIn";
 	$(document).ready(function(){
-		const indro_text_zh="我是kalicat,谢谢你的来访,这是一个个人介绍页面，有兴趣就联系我哟!";
+		const indro_text_zh="我是kalicat,谢谢你的来访,这是一个个人的介绍页面，有兴趣就联系我哟!";
 		const indro_text_en="I'm kalicat. Thank you for your visit,This is a personal introduction page. If you are interested, please contact me.";
 		var kalicat=$('.indro-kalicat-photo');
 		var indro=$('.indro-top-indro');
+		var indro_body_personal=$(".indro-body-personal");
+		var indro_body_hobbies=$('.indro-body-hobbies');
+		var indro_body_more=$('.indro-body-more');
+		var indro_body_personal_hidden=$('.indro-body-hidden-personal');
+		var indro_body_hobbies_hidden=$('.indro-body-hidden-hobbies');
+		var indro_body_more_hidden=$('.indro-body-hidden-more');
 		if(window.navigator.language.indexOf("zh")>-1){
 		indro.text(indro_text_zh);	
 		}else{
@@ -32,6 +38,22 @@
 			kalicat.removeClass(rotateIn);
 			indro.removeClass(bounceIn);
 		})
+		indro_body_personal.mouseover(function(){
+		 indro_body_personal_hidden.show();
+		}).mouseout(function(){
+			indro_body_personal_hidden.hide();
+		})
+		indro_body_hobbies.mousemove(function(){
+			indro_body_hobbies_hidden.show();
+		}).mouseout(function(){
+			indro_body_hobbies_hidden.hide();
+		})
+		indro_body_more.mouseover(function(){
+			indro_body_more_hidden.show();
+		}).mouseout(function(){
+			indro_body_more_hidden.hide();
+		})
+		
 	})
 	$(window).scroll(function(){
 		var top=$('.indro-top'),body=$('.intro-body'),footer=$('.intro-footer');
@@ -39,6 +61,7 @@
 		var w_height=window.screen.height/10;
 		if(w_top>=body.offset().top-w_height){
 			body.addClass(bounceIn);
+			$('.indro-body-text').addClass(fadeInDown);
 		}
 		if(w_top>=footer.offset().top-w_height){
 			footer.addClass(bounceIn);
@@ -57,12 +80,47 @@
 		KALICAT
 		</h1>
 		<h1 class="indro-top-indro animated bounceIn">
-			
 		</h1>
 	</div>
 </div>
 <div class="intro-body">
-	
+	<div class="indro-body-personal">
+		<div class="indro-body-hidden indro-body-hidden-personal">
+			<h1>杨杰/KaliCat</h1>
+			<h1>来自重庆96年处女座</h1>
+			<h1>我是一个热爱生活和世界的热血青年，有勇气，有斗志，有毅力。</h1>
+			<h1>更多特点等待你的挖掘</h1>
+			<h1>JieYang/KaliCat</h1>
+			<h1>Virgo from Chongqing in 1996</h1>
+			<h1>I am a warm-blooded youth who loves life and the world. I have courage, fighting spirit and perseverance.</h1>
+			<h1>More features await your digging</h1>
+		</div>
+		<h1 class="indro-body-text">个人简介/Personal profile</h1>
+	</div>
+	<div class="indro-body-hobbies">
+		<div class="indro-body-hidden indro-body-hidden-hobbies">
+			<h1>研究新事物</h1>
+			<h1>游戏</h1>
+			<h1>看书</h1>
+			<h1>看电影</h1>
+			<h1>跑步</h1>
+			<h1>Research New Things</h1>
+			<h1>Game</h1>
+			<h1>Reading</h1>
+			<h1>Movie</h1>
+			<h1>Running</h1>
+		</div>
+		<h1 class="indro-body-text">兴趣爱好/Hobbies</h1>
+	</div>
+	<div class="indro-body-more">
+		<div class="indro-body-hidden indro-body-hidden-more">
+			<h1><img src="static/img/qq.png"/></h1>
+			<h1>qq:2868607141</h1>
+			<h1><img src="static/img/wechat.png"/></h1>
+			<h1>wechat:kalicatmax</h1>
+		</div>
+	   <h1 class="indro-body-text">更多/More</h1>
+	</div>
 </div>
 <div class="intro-footer">
 	<h1>Contact Me联系我</h1>
@@ -86,7 +144,7 @@
 		 Gmail
 		 <img  src="static/img/gmail.png" class="intro-footer-item-img"/>
 		</h1>
-		<h1 style="text-align: left">2868607141kalicat@gmail.com</h1>
+		<h1>2868607141kalicat<br/>@gmail.com</h1>
 	</div>
 </div>
 </body>
