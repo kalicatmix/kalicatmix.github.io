@@ -12,6 +12,11 @@
 <link rel="stylesheet" type="text/css" href="static/css/requires.css">
 <script type="text/javascript" src="static/js/jquery.js" ></script>
 <script type="application/javascript">
+	if(typeof window !='undefined'){
+		if(window.navigator.userAgent.toLowerCase().indexOf('window')<0){
+			window.location.href="mobile.html"
+		}
+	}
 	var bounceIn="animated bounceIn";
 	var fadeInDown="animated fadeInDown";
 	var rotateIn="animated rotateIn";
