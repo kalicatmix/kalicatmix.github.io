@@ -4,7 +4,6 @@
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
     <title>个人介绍页面</title>
-		<script type="text/javascript" src="static/js/jquery.js" ></script>
 		<style type="text/css">
 			html{
 				width:100%;
@@ -44,14 +43,69 @@
 				width: 10rem;
 				height:10rem;
 			}
+			@keyframes anim{
+				from{
+					font-size: 3rem;
+				}
+				to{
+					font-size: 1rem;
+				}
+			}
+			.anim{
+				animation-name: anim;
+				animation-duration: 3s;
+				animation-delay:0s;
+				animation-fill-mode: both;
+				animation-iteration-count: 1;
+			}
+			.personal,.hobbies,.more{
+				width:100%;
+				height:100%;
+				background-image: url(static/img/coding.jpg);
+				background-position: left;
+				background-origin: content-box;
+				background-attachment: fixed;
+			}
 		</style>
 	</head>
 	<body>
+		<h1>kalicat的个人页面</h1>
 	<div class="header">
-		
+		<h1><img style="width: 10rem;height: 10rem;border-radius: 2rem;" src="static/img/cat.jpg"/></h1>
+	    <h1 class="anim">我是kalicat,谢谢你的来访,这是一个个人的介绍页面，有兴趣就联系我哟!</h1>
 	</div>
 	<div class="body">
-		
+		<div class="personal">
+			<h1>个人简介/Personal profile</h1>
+			<h1>杨杰/KaliCat</h1>
+			<h1>来自重庆96年处女座</h1>
+			<h1>我是一个热爱生活和世界的热血青年，有勇气，有斗志，有毅力。</h1>
+			<h1>更多特点等待你的挖掘</h1>
+			<h1>JieYang/KaliCat</h1>
+			<h1>Virgo from Chongqing in 1996</h1>
+			<h1>I am a warm-blooded youth who loves life and the world. I have courage, fighting spirit and perseverance.</h1>
+			<h1>More features await your digging</h1>
+			</div>
+			<div class="hobbies">
+				<h1>兴趣爱好/Hobbies</h1>
+				<h1>研究新事物</h1>
+			<h1>游戏</h1>
+			<h1>看书</h1>
+			<h1>看电影</h1>
+			<h1>跑步</h1>
+			<h1>Research New Things</h1>
+			<h1>Game</h1>
+			<h1>Reading</h1>
+			<h1>Movie</h1>
+			<h1>Running</h1>	
+			</div>
+			<div class="more">
+				 <h1>更多/More</h1>
+			<h1><img src="static/img/qq.png"/></h1>
+			<h1>qq:2868607141</h1>
+			<h1><img src="static/img/wechat.png"/></h1>
+			<h1>wechat:kalicatmax</h1>	
+			</div>
 	</div>
 	<div class="footer">
 		<h1>
